@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #ccc;
+    opacity: 0; /* Начальное состояние для анимации */
+    transform: translateY(-20px); /* Начальная позиция для анимации */
+    animation: slideIn 0.5s forwards; /* Анимация появления */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Конечное состояние для анимации */
+        transform: translateY(0); /* Конечная позиция для анимации */
+    }
+}
+
+.logo-container, .phone-container {
+    display: flex;
+    align-items: center;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 40px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    opacity: 0; /* Начальное состояние для анимации */
+    transform: translateY(-10px); /* Начальная позиция для анимации */
+    animation: fadeIn 0.5s forwards; /* Анимация появления */
+}
+
+.menu li:nth-child(1) a { animation-delay: 0.1s; }
+.menu li:nth-child(2) a { animation-delay: 0.2s; }
+.menu li:nth-child(3) a { animation-delay: 0.3s; }
+.menu li:nth-child(4) a { animation-delay: 0.4s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Конечное состояние для анимации */
+        transform: translateY(0); /* Конечная позиция для анимации */
+    }
+}
+
+.phone {
+    font-size: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Высота на весь экран */
+}
+
+.image-container {
+    flex: 1; /* Занимает половину экрана */
+    overflow: hidden;
+    opacity: 0; /* Начальное состояние для анимации */
+    transform: translateX(-50px); /* Начальная позиция для анимации */
+    animation: slideIn 1s forwards; /* Анимация появления */
+}
+
+.image-container img {
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    object-fit: cover; /* Сохранение пропорций изображения */
+}
+
+.text-container {
+    flex: 1; /* Занимает половину экрана */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    background-color: #f8f8f8;
+    opacity: 0; /* Начальное состояние для анимации */
+    transform: translateX(50px); /* Начальная позиция для анимации */
+    animation: fadeIn 1s forwards; /* Анимация появления */
+    animation-delay: 0.1s; /* Задержка для текста */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Конечное состояние для анимации */
+        transform: translateX(0); /* Конечная позиция для анимации */
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Конечное состояние для анимации */
+        transform: translateX(0); /* Конечная позиция для анимации */
+    }
+}
+
+.headline {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    font-size: 24px;
+}
+
+.container1 {
+    display: flex;
+    height: 85vh; /* Высота на весь экран */
+    align-items: center; /* Центрирование по вертикали */
+    padding: 0px 450px;
+}
+
+.image-container1 {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: center; /* Центрирование по горизонтали */
+    margin-right: 50px; /* Отступ между изображениями и текстом */
+}
+
+.circle-image {
+    width: 200px; /* Ширина изображения */
+    height: 200px; /* Высота изображения */
+    border-radius: 50%; /* Круглая форма */
+    object-fit: cover; /* Сохранение пропорций изображения */
+    margin-bottom: 20px; /* Отступ между изображениями */
+    opacity: 0; /* Начальное состояние для анимации */
+    transform: translateY(20px); /* Начальная позиция для анимации */
+    animation: fadeInUp 0.5s forwards; /* Анимация появления */
+}
+
+.circle-image:nth-child(1) {
+    animation-delay: 0.2s; /* Задержка для первого изображения */
+}
+
+.circle-image:nth-child(2) {
+    animation-delay: 0.4s; /* Задержка для второго изображения */
+}
+
+.circle-image:nth-child(3) {
+    animation-delay: 0.6s; /* Задержка для третьего изображения */
+}
+
+.text-container1 {
+    flex: 1; /* Занимает оставшуюся ширину */
+}
+
+h1, p {
+    opacity: 0; /* Начальное состояние для анимации текста */
+    transform: translateY(20px); /* Начальная позиция для анимации текста */
+    animation: fadeInUp 0.5s forwards; /* Анимация появления текста */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation-delay: 0.8s; /* Задержка для заголовка */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    animation-delay: 1s; /* Задержка для параграфа */
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Конечное состояние для анимации */
+        transform: translateY(0); /* Конечная позиция для анимации */
+    }
+}
+
+.container2 {
+    max-width: 1600px;
+    margin: auto;
+    text-align: center;
+    height: 55vh;
+    padding-top: 40px
+}
+
+.animated-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.results {
+    display: flex;
+ 
+    margin: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start; /* Выравнивание по левому краю */
+}
+
+.result {
+    background-color: #fff;
+    border-radius: 10px;
+
+    
+    opacity: 0; /* Начальное состояние для анимации */
+    transform: translateX(100%); /* Начальная позиция для анимации */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавный переход */
+}
+
+.number {
+    font-size: 100px;
+    font-weight: bold;
+    color: #000000; /* Зеленый цвет для чисел */
+}
+
+/* Описание с отступами для эффекта лестницы */
+.description {
+    font-size: 18px;
+    color: #555; /* Темно-серый цвет для описания */
+    margin-top: 5px;
+}
+
+/* Установка отступов для создания эффекта лестницы */
+.result:nth-child(1) {
+    margin-left:130px; /* Первый элемент без отступа */
+}
+
+.result:nth-child(2) {
+    margin-left: 605px; /* Второй элемент смещен вправо */
+}
+
+.result:nth-child(3) {
+    margin-left: 1100px; /* Третий элемент смещен еще больше вправо */
+}
+
+/* Анимация появления текста */
+.show {
+    opacity: 1; /* Конечное состояние для анимации */
+    transform: translateX(0); /* Конечная позиция для анимации */
+}
+
+
+.container3 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; /* Расстояние между карточками */
+}
+
+.card {
+    position: relative; /* Для позиционирования наложения */
+    overflow: hidden; /* Скрытие содержимого, выходящего за пределы карточки */
+    border-radius: 10px; /* Закругление углов карточек */
+    transition: transform 0.3s; /* Плавный эффект при наведении */
+    opacity: 0; /* Начальная непрозрачность карточки */
+    transform: translateY(20px); /* Смещение карточки вниз */
+    animation: fadeIn 0.5s forwards; /* Анимация появления */
+}
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.5s; }
+.card:nth-child(3) { animation-delay: 0.7s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Конечная непрозрачность */
+        transform: translateY(0); /* Возвращаем в исходное положение */
+    }
+}
+
+.card:hover {
+    transform: scale(1.05); /* Увеличение карточки при наведении */
+}
+
+.card img {
+    width: 400px; /* Ширина изображения */
+    height: 250px; /* Высота изображения */
+    display: block; /* Убираем пробелы под изображением */
+}
+
+.overlay {
+    position: absolute; /* Абсолютное позиционирование наложения */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+    opacity: 0; /* Начальная прозрачность наложения */
+    display: flex; /* Используем flex для центрирования текста */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    transition: opacity 0.3s; /* Плавный переход для прозрачности */
+}
+
+.card:hover .overlay {
+    opacity: 1; /* Прозрачность наложения при наведении */
+}
+
+.text {
+    padding: 0 20px;
+    color: white; /* Цвет текста */
+    font-size: 16px; /* Размер текста */
+    transform: translateY(20px); /* Начальное положение текста */
+    opacity: 0; /* Начальная непрозрачность текста */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Плавный переход для текста */
+}
+
+.card:hover .text {
+    transform: translateY(0); /* Возвращаем текст в исходное положение */
+    opacity: 1; /* Делаем текст видимым при наведении */
+}
+
+.image-container3 {
+    display: flex; /* Используем flex для горизонтального расположения */
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; /* Промежуток между изображениями */
+}
+
+.image1 {
+    width: 158px; /* Ширина изображения */
+    height: 40px; /* Высота изображения */
+    transition: transform 0.2s; /* Плавный эффект при наведении */
+    opacity: 0; /* Начальное состояние - невидимо */
+    transform: translateY(20px); /* Сдвиг вниз для эффекта появления */
+    animation: fadeInUp 1.9s forwards; /* Анимация появления */
+}
+
+.image1:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+h2{
+    font-size: 36px;
+    text-align: center;
+}
+
+/* Определяем анимацию */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Конечное состояние - видимо */
+        transform: translateY(0); /* Возвращаем на место */
+    }
+}
+.logo img{
+    padding-top: 10px;
+    width: 40px;
+    height: 50px;
+}
+.title{
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Начальная прозрачность */
+        transform: translateY(20px); /* Смещение вниз */
+    }
+    to {
+        opacity: 1; /* Конечная прозрачность */
+        transform: translateY(0); /* Возвращаем на место */
+    }
+}
+
+.footer {
+    
+    display: flex;
+    justify-content: space-between; /* Расположение элементов */
+    align-items: center; /* Центрирование по вертикали */
+    padding: 0 180px; /* Отступы */
+
+    color: rgb(0, 0, 0); /* Цвет текста */
+    animation: fadeIn 0.5s ease-in-out; /* Применяем анимацию */
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение логотипа и текста */
+   /* Выравнивание по левому краю */
+}
+
+.footer-logo img {
+    margin-bottom: 5px; /* Отступ между логотипом и текстом */
+}
+
+.footer-menu ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    display: flex; /* Горизонтальное расположение пунктов меню */
+    gap: 20px; /* Промежуток между пунктами меню */
+}
+
+.footer-menu a {
+    font-size: 24px;
+    text-decoration: none; /* Убираем подчеркивание */
+    color: rgb(0, 0, 0); /* Цвет текста ссылок */
+}
+
+.footer-socials {
+    display: flex; /* Горизонтальное расположение ссылок на соцсети */
+    gap: 15px; /* Промежуток между ссылками */
+}
+
+.footer-socials a {
+    font-size: 19px;
+    text-decoration: none; /* Убираем подчеркивание */
+    color: rgb(0, 0, 0); /* Цвет текста ссылок */
+}
+
+.animated-title {
+    opacity: 0; /* Начальное состояние: невидимо */
+    transform: translateY(-20px); /* Сдвиг вверх */
+    animation: fadeInUp 1s forwards; /* Запуск анимации */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Конечное состояние: видимо */
+        transform: translateY(0); /* Возврат на место */
+    }
+}
